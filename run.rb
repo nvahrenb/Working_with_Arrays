@@ -6,11 +6,23 @@ get '/' do
 end
 
 get '/years' do
-  # code!
+
+  @years = Array(1972..2013)
+
   erb :years, layout: :main
 end
 
 get '/states' do
-  # code!
+  
+  @states = ["Michigan", "Missouri", "Kansas", "Indiana", "Illinois"]
+  
+  puts "\nSorted:"
+  puts @states.sort
+  puts "\nUnsorted:"
+  puts @states
+  puts "\n"
+  
+  @states.sort!
+  
   erb :states, layout: :main
 end
